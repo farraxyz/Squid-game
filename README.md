@@ -37,3 +37,55 @@
     <script src="script.js"></script>
 </body>
 </html>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+.loader-container {
+    display: flex;
+    gap: 20px;
+}
+
+.loader svg {
+    width: 80px;
+    height: 80px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    animation: animate 2s linear infinite;
+}
+
+/* Animasi untuk lingkaran bergerak */
+.moving-dot {
+    fill: #800080;
+    animation: move-dot 2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        stroke-dasharray: 0, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 100, 150;
+        stroke-dashoffset: -40;
+    }
+    100% {
+        stroke-dasharray: 100, 150;
+        stroke-dashoffset: -100;
+    }
+}
+
+/* Animasi bulatan ungu */
+@keyframes move-dot {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(32px, 32px
